@@ -2,8 +2,8 @@
 void setup()
 {
     DDRB=0xFF;
-    DDRC|=(1<<PC0);//en
-    DDRC|=(1<<PC1);//rs
+    DDRC|=(1<<PC0);//rs
+    DDRC|=(1<<PC1);//en
 }
 void lcd_cmd(unsigned char val)
 {   PORTB=val;
