@@ -18,14 +18,14 @@ void lcd_cmd1(unsigned char val)
     PORTC|=(1<<PC0);
     _delay_ms(100);
     PORTC&=~(1<<PC0);
-    _delay_ms(200);
+    
     
     PORTB=(PORTB & 0x0F )|(val<<4);
      PORTC&=~(1<<PC1);
     PORTC|=(1<<PC0);
     _delay_ms(100);
     PORTC&=~(1<<PC0);
-    _delay_ms(200);
+    
 }
 void lcd_data1(unsigned char data)
 {
@@ -34,14 +34,14 @@ void lcd_data1(unsigned char data)
     PORTC|=(1<<PC0);
     _delay_ms(100);
     PORTC&=~(1<<PC0);
-    _delay_ms(200);
+    
     
     PORTB=(PORTB & 0x0F )|(data<<4);
      PORTC|=(1<<PC1);
     PORTC|=(1<<PC0);
     _delay_ms(100);
     PORTC&=~(1<<PC0);
-    _delay_ms(200);
+ 
 }
 void lcd_init1()
 {
